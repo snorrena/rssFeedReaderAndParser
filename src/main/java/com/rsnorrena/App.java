@@ -227,6 +227,9 @@ public class App {
 
         //the comma and extra space is removed from the day of month
         String dayOfMonth = tmp[1].replace(",", "").trim();
+        if(Integer.parseInt(dayOfMonth) < 10){
+            dayOfMonth = "0" + dayOfMonth;
+        }
 
         //the year string is trimmed of leading and trailing white space
         String year = tmp[2].trim();
